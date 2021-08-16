@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- https://www.w3schools.com/bootstrap/bootstrap_get_started.asp -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <style>@font-face { font-family: JuneBug; src: url('JUNEBUG.TTF');}</style>
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}"/>
+   <title>HOMEPAGE</title>
+</head>
+<body>
+  <div class="container-fluid" style="min-height: 100%;">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-2 col-md-8" style="font-family: JuneBug; background-color: rgba(255, 255, 255, 0.8); min-height: 100%; margin-bottom: 5rem;" >
+        <h1 style="color: #FFA500; font-weight: bolder;" class="text-center">MACHINE LEARNING</h1>
+        <p style="font-size: 2rem; margin:8rem 4rem 4rem 4rem; font-weight:bold; color: royalblue;">Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.</p>
+        <center><img src="{{url_for('static',filename='ml.jpg')}}" alt="ML" class="img-responsive"></center>
+        <p style="font-size: 2rem; margin:8rem 4rem 4rem 4rem; font-weight:bold; color: royalblue;">In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.<br><br>So, What's the concept behind Machine Learning?<br><br>AI is a bigger concept to create intelligent machines that can simulate human thinking capability and behavior, whereas, machine learning is an application or subset of AI that allows machines to learn from data without being programmed explicitly.</p>
+        <center><img src="{{url_for('static',filename='ai.jpg')}}" alt="ML" class="img-responsive"></center>
+        <center>
+        <a href='/search'><button class="btn btn-primary" style="width: 40%; height:5rem ;font-weight: bolder; font-size: 3rem; border-style: ridge; margin-top: 10rem;">PREDICT</button></a><br><br></center>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

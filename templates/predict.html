@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- https://www.w3schools.com/bootstrap/bootstrap_get_started.asp -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+   <style>@font-face { font-family: JuneBug; src: url('JUNEBUG.TTF');}</style>
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+   <title>HOMEPAGE</title>
+</head>
+<body>
+  <div class="container-fluid" style="min-height: 100%;">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-2 col-md-8" style="font-family: JuneBug; background-color: rgba(255, 255, 255, 0.8); min-height: 100%; margin-bottom: 5rem;" >
+        <h1 style="color: #FFA500; font-weight: bolder;" class="text-center">Calculate Profit</h1>
+        <form style="font-size: 2rem; margin:8rem 4rem 4rem 4rem; font-weight:bold; color: royalblue;" method="POST", action="{{url_for('home')}}"><br>
+           <label style="font-size:1.7rem">Research & Development
+            Spend</label> <input type="number" name="rnd" class="form-control" placeholder="Enter the Overall Rating between 1-10" required>  
+          <label style="font-size:1.7rem">Administration</label> <input type="number" name="admin" class="form-control" placeholder="Enter the Overall Rating between 1-10" required>
+          <label style="font-size:1.7rem">Marketing Spend</label> <input type="number" name="marketing" class="form-control" placeholder="Enter the Placement Rating between 1-10" required>
+          <button type="submit" class="btn btn-danger" style="width: 40%; height:5rem ;font-weight: bolder; font-size: 3rem; border-style: ridge; margin-top: 10rem;">Predict!</button>
+        </form>
+        <center>
+
+          {%if data%}
+              <h1>{{data}}</h1>   
+          {%endif%}
+
+          <!--<H1>SEARCH COLLEGE BY STATE</H1>
+        <button class="btn btn-danger" style="width: 30%; height:5rem ;font-weight: bolder; font-size: 3rem; border-style: ridge; margin-top: 5rem;">Search</button><br>-->
+        <a href="/"><button class="btn btn-primary" style="width: 40%; height:5rem ;font-weight: bolder; font-size: 3rem; border-style: ridge; margin-top: 10rem;">HOME</button></a><br><br></center>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
